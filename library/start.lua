@@ -13,9 +13,25 @@ viewCompter = [[
 			stroke:blue;
 			stroke-width:2px;
 		}
+		.button{
+			font-size:40px;
+			position:absolute;
+			left:412px;
+			top:500px;
+			padding:5px;
+			background-color:#0174DF;
+			border:5px solid #045FB4;
+			border-radius:5px;
+			color:white;
+			display:inline;
+			text-align:center;
+			width:200px;
+		}
 	</style>
 	<rect class="test" stroke="white" fill="transparent" stroke-width="3"/>
 	<text class="text" x="512" y="306">{{val}}</text>
+
+	<div class="button">btnTest</div>
 </svg>
 ]]
 
@@ -51,6 +67,20 @@ viewGauge = [[
 		.g3{
 			y:300px;
 		}
+		.button{
+			font-size:40px;
+			position:absolute;
+			left:412px;
+			top:500px;
+			padding:5px;
+			background-color:#0174DF;
+			border:5px solid #045FB4;
+			border-radius:5px;
+			color:white;
+			display:inline;
+			text-align:center;
+			width:200px;
+		}
 	</style>
 	<text x="110" y="90" class="text">Atmo 1</text>
 	<rect class="progress g1" width="{{fuel1}}"/>
@@ -66,5 +96,40 @@ viewGauge = [[
 	<rect class="progress g3" width="{{fuel3}}"/>
 	<rect class="gauge g3"/>
 	<text x="110" y="335" class="text">{{val3}} %</text>
+
+	<div class="button">btnTest</div>
+</svg>
+]]
+
+viewDep = [[
+<svg width="1024" height="612" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		.button{
+			font-size:40px;
+			position:absolute;
+			left:412px;
+			top:500px;
+			padding:5px;
+			background-color:#0174DF;
+			border:5px solid #045FB4;
+			border-radius:5px;
+			color:white;
+			display:inline;
+			text-align:center;
+			width:200px;
+		}
+		.rect{
+			x:{{x}}px;
+			y:{{y}}px;
+			width:100px;
+			height:100px;
+			stroke:#DF0101;
+			fill:#FE2E2E;
+			stroke-width:5px;
+		}
+	</style>
+	<rect class="rect" />
+
+	<div class="button">btnTest</div>
 </svg>
 ]]

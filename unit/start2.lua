@@ -24,8 +24,27 @@ controllerGauge = function()
     return replace(viewGauge, val)
 end
 
-controllerCompter = function()
-    render = replace(viewCompter, {val = compter})
+controllerCompter = function() 
     compter = compter + 1
-    return render
+    if (compter == 24) then
+        seconde = seconde + 1
+        compter = 0
+    end
+    return replace(viewCompter, {val = seconde})
+end
+
+controllerDep = function()
+    --eventClick(0, 0, 1024, 500, function(mX, mY)
+    
+    eventClick(squareX - 50, squareY - 50, 100, 100, function(mX, mY)
+        squareX = mX
+        squareY = mY
+    end, false)
+    
+    val = {
+        x = squareX - 50,
+        y = squareY - 50
+    }
+    
+    return replace(viewDep, val)
 end
