@@ -34,8 +34,6 @@ controllerCompter = function()
 end
 
 controllerDep = function()
-    --eventClick(0, 0, 1024, 500, function(mX, mY)
-    
     eventClick(squareX - 50, squareY - 50, 100, 100, function(mX, mY)
         squareX = mX
         squareY = mY

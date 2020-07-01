@@ -42,7 +42,7 @@ eventClick = function(x, y, w, h, callback, antiBound)
             callback(mX, mY)
         end
     else
-        if (antiBound == true) then
+        if (antiBound == true and bound == 0) then
             bound = (bound == 1) and 0 or 1
         end
     end

@@ -1,7 +1,6 @@
 screen.clear()
 
 eventClick(412, 500, 200, 60, function()
-    --screen.setCenteredText('test')
     if state == 1 then
         state = 2
     elseif state == 2 then
