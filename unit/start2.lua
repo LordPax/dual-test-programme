@@ -30,7 +30,15 @@ controllerCompter = function()
         seconde = seconde + 1
         compter = 0
     end
-    return replace(viewCompter, {val = seconde})
+    if (seconde == 60) then
+        minute = minute + 1
+        seconde = 0
+    end
+    
+    return replace(viewCompter, {
+        sec = seconde,
+        min = minute
+    })
 end
 
 controllerDep = function()

@@ -1,21 +1,15 @@
 screen.clear()
 
 eventClick(412, 500, 200, 60, function()
-    if state == 1 then
-        state = 2
-    elseif state == 2 then
-        state = 3
-    else
-        state = 1
-    end
+    state = switch(state)
+    .case(1, function() return 2 end)
+    .case(2, function() return 3 end)
+    .default(function() return 1 end)
 end, true)
 
-if state == 1 then
-    render = controllerGauge()
-elseif state == 2 then
-    render = controllerCompter()
-else
-    render = controllerDep()
-end
+local render = switch(state)
+.case(1, function() return controllerGauge() end)
+.case(2, function() return controllerCompter() end)
+.default(function() return controllerDep() end)
 
 screen.setHTML(render)
