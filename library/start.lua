@@ -136,15 +136,7 @@ viewDep = [[
 ]]
 
 viewVeille = [[
-<svg width="1024" height="612" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .img{
-            width:512px;
-            height:512px
-            x:256px;
-            y:50px
-        }
-    </style>
-    <image class="img" href="https://cdn.discordapp.com/attachments/597133708922978304/597137058988818432/3dlogo.gif"/>
+<svg width="1024" height="612">
+    <image xlink:href="https://cdn.discordapp.com/attachments/597133708922978304/597137058988818432/3dlogo.gif" x="256" y="50" height="512" width="512" />
 </svg>
 ]]
